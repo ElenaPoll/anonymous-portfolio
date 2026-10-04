@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.P. - Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- STILI PER EFFETTO BLURRY SU INFORMAZIONI SENSIBILI -->
+    <style>
+        .blur-sensitive {
+            filter: blur(6px);
+            transition: filter 0.3s ease;
+            cursor: pointer;
+        }
+        .blur-sensitive:hover {
+            filter: blur(0);
+        }
+    </style>
+
+    <!-- STILI AGGIUNTIVI PER IL TICKER SCORREVOLE DELLE CARD -->
+    <style>
+        .card-header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            overflow: hidden;
+        }
+        .card-ticker-wrapper {
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .card-ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollTicker 22s linear infinite;
+        }
+        .card-ticker-wrapper:hover .card-ticker {
+            animation-play-state: paused;
+        }
+        @keyframes scrollTicker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR CON SELETTORE LINGUA -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" data-translate="nav_home">Homepage</a></li>
+                <li><a href="#about" data-translate="nav_about">About me</a></li>
+                <li><a href="#works" data-translate="nav_works">Selected works</a></li>
+                <li><a href="#contacts" data-translate="nav_contacts">Contacts</a></li>
+            </ul>
+
+            <div class="lang-switch">
+                <a href="#" class="lang-option active" data-lang="en">ENG</a>
+                <span class="lang-divider">|</span>
+                <a href="#" class="lang-option" data-lang="it">ITA</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION MODERNA -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <div class="hero-badge">
+                    <span class="dash">—</span>
+                    <span data-translate="hero_badge">
+                        AVAILABLE FOR EMPLOYMENT
+                    </span>
+                    <span class="dash">—</span>
+                </div>
+
+                <h1 class="hero-heading">
+                    <span data-translate="hero_title_hi">Hi, I'm</span>
+                    <em class="blur-sensitive" title="Sensitve info">xxx.</em>
+                </h1>
+
+                <h2 class="hero-role" data-translate="hero_role">Digital Designer & UX/UI Specialist</h2>
+
+                <p class="hero-intro" data-translate="hero_intro">
+                    <em>I define myself as a <strong style="font-weight: 500;">digital humanist</strong> because I combine design, research, and project management to create human-centered experiences.</em>
+                </p>
+
+                <a href="#about" class="hero-ux-scroll">
+                    <div class="scroll-pill">
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <span data-translate="hero_scroll_label">Explore approach & works</span>
+                </a>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="hero-frame-bg"></div>
+                <img
+                    src="assets/hero-portrait.png"
+                    alt="XXX"
+                    class="hero-portrait-modern blur-sensitive"
+                    title="Sensitive info"
+                >
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="main-container">
+
+            <!-- ABOUT ME SECTION -->
+            <section id="about" class="about-section">
+                <div class="section-title-wrapper">
+                    <div class="line"></div>
+                    <h2 class="section-title" data-translate="about_title">
+                        About me
+                    </h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p data-translate="about_p1">
+                            I am a designer with a background evolving from product and communication design to the digital sphere and experience design. My profile combines a solid academic root — culminating in a PhD in Design dedicated to accessibility and inclusiveness in digital ecosystems — to a strongly strategic vision.
+                        </p>
+
+                        <p data-translate="about_p2">
+                            I integrate research, strategy, and design to translate complex challenges into structured solutions, accompanying initiatives from concept to delivery, with a method in which creative vision is constantly fused with organizational rigor and coordination.
+                        </p>
+
+                        <div class="areas-of-intervention" data-translate="about_p3_title">
+                            <strong style="font-weight: 500;">Areas of intervention:</strong>
+                        </div>
+                        <ul class="areas-list" data-translate="about_p3_list">
+                            <li><strong style="font-weight: 500;">Digital & Inclusive Experience Design:</strong> design of accessible, conscious, and person-centered user experiences.</li>
+                            <li><strong style="font-weight: 500;">Project Management & Coordination:</strong> end-to-end project management and development, from initial brief to realization.</li>
+                            <li><strong style="font-weight: 500;">Strategic Consulting:</strong> translation of systemic complexities into clear operative strategies.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="https://unige.iris.cineca.it/cris/rp/rp87068" class="open-book-trigger blur-sensitive" target="_blank" rel="noopener noreferrer" title="Sensitive info">
+                            <span class="trigger-text" data-translate="btn_pub">Publications</span>
+                            <span class="trigger-action">&rarr;</span>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1c4zVQFyh4QvlXAP3Y-TrmDYZAZjWb6-3/view?usp=sharing" class="open-book-trigger blur-sensitive" target="_blank" rel="noopener noreferrer" title="Sensitive info">
+                            <span class="trigger-text" data-translate="btn_end">Endorsements</span>
+                            <span class="trigger-action">&rarr;</span>
+                        </a>
+
+                        <a href="https://drive.google.com/drive/folders/10m5pbpND0SlUdgTQ2UemcVd5CPXDOtZB?usp=sharing" class="open-book-trigger blur-sensitive" target="_blank" rel="noopener noreferrer" title="Sensitive info">
+                            <span class="trigger-text" data-translate="btn_cert">Certifications</span>
+                            <span class="trigger-action">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SELECTED WORKS SECTION -->
+            <section id="works" class="works-section">
+                <div class="section-title-wrapper">
+                    <div class="line"></div>
+                    <h2 class="section-title" data-translate="works_title">
+                        Selected works
+                    </h2>
+                </div>
+
+                <p class="works-intro" data-translate="works_intro">
+                    A curated showcase where empirical research meets digital architecture, transforming complex challenges into measurable human experiences.
+                </p>
+
+                <p class="works-subintro" data-translate="works_subintro">
+                    <strong style="font-weight: 500;">
+                        Click on any project to explore full case studies, methodologies, and technical metrics.
+                    </strong>
+                </p>
+
+                <div class="works-layout">
+
+                    <!-- EASYWCAG -->
+                    <article class="work-card card-01">
+                        <a href="easywcag.html" class="card-link-overlay" aria-label="EasyWCAG Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">01</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card1_tags">
+                                    WCAG AUDITING &nbsp;&bull;&nbsp; SEMANTIC ARCHITECTURE &nbsp;&bull;&nbsp; EMPIRICAL TESTING &nbsp;&bull;&nbsp; WCAG AUDITING &nbsp;&bull;&nbsp; SEMANTIC ARCHITECTURE &nbsp;&bull;&nbsp; EMPIRICAL TESTING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card1_title">Designing for compliance</h3>
+                            <p class="card-description">
+                                <span data-translate="card1_desc">Translated complex WCAG compliance mandates into an intuitive interface architecture, building a robust semantic foundation ensuring full digital accessibility. <strong style='font-weight: 500;'>Operational efficiency: 95%</strong> of the sample experienced a drastic <strong style='font-weight: 500;'>acceleration</strong> in search and decoding times for individual regulatory parameters.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- ALTEREGO -->
+                    <article class="work-card card-02">
+                        <a href="alterego.html" class="card-link-overlay" aria-label="Alter Ego Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">02</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card2_tags">
+                                    EVENT CURATION &nbsp;&bull;&nbsp; PEER REVIEW &nbsp;&bull;&nbsp; ACADEMIC EDITING &nbsp;&bull;&nbsp; EVENT CURATION &nbsp;&bull;&nbsp; PEER REVIEW &nbsp;&bull;&nbsp; ACADEMIC EDITING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card2_title">Designing for dissemination</h3>
+                            <p class="card-description">
+                                <span data-translate="card2_desc">Conceptualized and led the complete execution of a high-level academic symposium examining AI and creative labor, managing the end-to-end publishing lifecycle across <strong style='font-weight: 500;'>40+ examined papers</strong>.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- DIGITAL ACCESSIBILITY TRAINING -->
+                    <article class="work-card card-03">
+                        <a href="citizen-inclusion.html" class="card-link-overlay" aria-label="Digital Accessibility Training Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">03</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card3_tags">
+                                    TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; PUBLIC UPSKILLING &nbsp;&bull;&nbsp; TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; PUBLIC UPSKILLING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card3_title">Designing for education</h3>
+                            <p class="card-description">
+                                <span data-translate="card3_desc">Designed and executed a digital inclusion program under the PNRR framework, upskilling 375 public sector professionals across online editions and measuring impact with a <strong style='font-weight: 500;'>final satisfaction of 96.48%</strong>.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- MOBIQUITY -->
+                    <article class="work-card card-04">
+                        <a href="mobiquity.html" class="card-link-overlay" aria-label="Mobiquity Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">04</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card4_tags">
+                                    R&D COORDINATION &nbsp;&bull;&nbsp; ETHNOGRAPHIC RESEARCH &nbsp;&bull;&nbsp; MOBILE UX &nbsp;&bull;&nbsp; R&D COORDINATION &nbsp;&bull;&nbsp; ETHNOGRAPHIC RESEARCH &nbsp;&bull;&nbsp; MOBILE UX
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card4_title">Designing for facilitation</h3>
+                            <p class="card-description">
+                                <span data-translate="card4_desc">Spearheaded the co-design strategy for an ERDF-funded R&D initiative managing <strong style='font-weight: 500;'>7 partners</strong>, <strong style='font-weight: 500;'>2 Living Lab activities</strong>, and <strong style='font-weight: 500;'>4+ focus group activities</strong> to reimagine urban transit.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- NASSA -->
+                    <article class="work-card card-05">
+                        <a href="nassa.html" class="card-link-overlay" aria-label="Nassa Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">05</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card5_tags">
+                                    COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; SOCIAL MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING &nbsp;&bull;&nbsp; COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; SOCIAL MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card5_title">Designing for engagement</h3>
+                            <p class="card-description">
+<span data-translate="card5_desc">Drove community engagement and social impact strategies for Nassa Sestri Levante, engaging a <strong style='font-weight: 500;'>local community of 2K+ people</strong> through <strong style='font-weight: 500;'>20+ activities and events</strong> over the past 5 years.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- SELF ACCETTAZIONE -->
+                    <article class="work-card card-06">
+                        <a href="self-accettazione.html" class="card-link-overlay" aria-label="Self accettazione Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">06</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card6_tags">
+                                    HEALTHCARE UX &nbsp;&bull;&nbsp; UI REDESIGN &nbsp;&bull;&nbsp; A/B TESTING &nbsp;&bull;&nbsp; HEALTHCARE UX &nbsp;&bull;&nbsp; UI REDESIGN &nbsp;&bull;&nbsp; A/B TESTING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card6_title">Designing for comparison</h3>
+                            <p class="card-description">
+                                <span data-translate="card6_desc">Designed a user-centered redesign concept for a healthcare portal, achieving that <strong style='font-weight: 500;'>86.67% of users felt safer and more confident</strong> performing hospital check-ins online rather than at physical desks.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- AD'AGIO -->
+                    <article class="work-card card-07">
+                        <a href="adagio.html" class="card-link-overlay" aria-label="Ad'agio Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">07</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card7_tags">
+                                    SERVICE DESIGN &nbsp;&bull;&nbsp; PARTICIPATORY WORKSHOPS &nbsp;&bull;&nbsp; STAKEHOLDER ALIGNMENT &nbsp;&bull;&nbsp; SERVICE DESIGN &nbsp;&bull;&nbsp; PARTICIPATORY WORKSHOPS &nbsp;&bull;&nbsp; STAKEHOLDER ALIGNMENT
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card7_title">Designing for inclusion</h3>
+                            <p class="card-description">
+                                <span data-translate="card7_desc">Led user research and co-design for a Living Lab initiative having <strong style='font-weight: 500;'>automatized the verification of over 80 attention elements</strong> for domestic accessibility to enhance autonomy for seniors.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- FASCICOLO DEL CITTADINO -->
+                    <article class="work-card card-08">
+                        <a href="fascicolo.html" class="card-link-overlay" aria-label="Fascicolo del Cittadino Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">08</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card8_tags">
+                                    USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; INCLUSIVE PRINCIPLES &nbsp;&bull;&nbsp; USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; INCLUSIVE PRINCIPLES
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card8_title">Designing for optimization</h3>
+                            <p class="card-description">
+                                <span data-translate="card8_desc">Identified <strong style='font-weight: 500;'>25 targeted interventions</strong> to resolve errors on a public administration website that previously suffered from a high average task abandonment rate of <strong style='font-weight: 500;'>71.87%</strong>.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- BARILLA -->
+                    <article class="work-card card-09">
+                        <a href="barilla.html" class="card-link-overlay" aria-label="Barilla Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">09</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card9_tags">
+                                    3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH &nbsp;&bull;&nbsp; 3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card9_title">Designing for product</h3>
+                            <p class="card-description">
+                                <span data-translate="card9_desc">Developed a comprehensive product design initiative with <strong style='font-weight: 500;'>Barilla</strong>, integrating advanced prototyping techniques with market research and <strong style='font-weight: 500;'>visual storytelling</strong>.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+
+                    <!-- BOOKED TIME -->
+                    <article class="work-card card-10">
+                        <a href="bookedtime.html" class="card-link-overlay" aria-label="Booked Time Case Study"></a>
+                        <div class="card-header-meta">
+                            <span class="card-number">10</span>
+                            <div class="card-ticker-wrapper">
+                                <div class="card-tags card-ticker" data-translate="card10_tags">
+                                    DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING &nbsp;&bull;&nbsp; DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 data-translate="card10_title">Designing for web</h3>
+                            <p class="card-description">
+                                <span data-translate="card10_desc">Conceptualized and developed Booked Time following a <strong style='font-weight: 500;'>questionnaire administered to over 100 users</strong> regarding reading difficulties and desires to shape a high-social-value digital solution.</span>
+                            </p>
+                        </div>
+                        <span class="hover-project-link" data-translate="explore_project">Discover the project &rarr;</span>
+                    </article>
+
+                </div>
+
+                <div style="margin-top: 60px; text-align: center;">
+                    <p style="font-family: 'Fira Sans Condensed', sans-serif; font-weight: 300; font-style: italic; font-size: 1.2rem; line-height: 1.7; color: var(--clr-text); max-width: 850px; margin: 0 auto;" data-translate="works_conclusion">
+                        These projects reflect the current state of my work and my approach, <br>
+                        driven by a simple conviction: design is everywhere.<br>
+                        When it works, you don’t see it.<br>
+                        When it doesn’t, I do — and I can’t help but think about how to make it better.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer id="contacts" class="footer-section">
+        <div class="footer-container">
+            <h2 class="footer-title" data-translate="footer_title">
+                I'm always open to meaningful opportunities.
+            </h2>
+
+            <div class="footer-actions">
+                <a
+                    href="mailto:elenapolleri@gmail.com"
+                    class="footer-btn blur-sensitive"
+                    data-translate="btn_email"
+                    title="Sensitive info"
+                >
+                    Contact me via email &rarr;
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/elenapolleri/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-btn blur-sensitive"
+                    data-translate="btn_linkedin"
+                    title="Sensitive info"
+                >
+                    Connect on LinkedIn &rarr;
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- BOTTONE BACK TO TOP -->
+    <a
+        href="#home"
+        id="scrollTopBtn"
+        class="scroll-top-btn"
+        aria-label="Torna su"
+    >
+        <svg class="progress-ring" viewBox="0 0 45 45">
+            <circle id="progressRingCircle" cx="22.5" cy="22.5" r="20.5" />
+        </svg>
+        <svg
+            class="arrow-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+        >
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </a>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-trail"></div>
+
+
+    <!-- SCRIPT GESTIONE INTERAZIONI, LINGUA E SCROLL -->
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Homepage",
+                nav_about: "About me",
+                nav_works: "Selected works",
+                nav_contacts: "Contacts",
+                hero_badge: "AVAILABLE FOR EMPLOYMENT",
+                hero_role: "Digital Designer & UX/UI Specialist",
+                hero_title_hi: "Hi, I'm",
+                hero_intro: "<em>I define myself as a <strong style='font-weight: 500;'>digital humanist</strong> because I combine design, research, and project management to create human-centered experiences.</em>",
+                hero_scroll_label: "Explore approach & works",
+                about_title: "About me",
+                about_p1: "I am a designer with a background evolving from product and communication design to the digital sphere and experience design. My profile combines a solid academic root — culminating in a PhD in Design dedicated to accessibility and inclusiveness in digital ecosystems — to a strongly strategic vision.",
+                about_p2: "I integrate research, strategy, and design to translate complex challenges into structured solutions, accompanying initiatives from concept to delivery, with a method in which creative vision is constantly fused with organizational rigor and coordination.",
+                about_p3_title: "<strong style='font-weight: 500;'>Areas of intervention:</strong>",
+                about_p3_list: `<li><strong style='font-weight: 500;'>Digital & Inclusive Experience Design:</strong> design of accessible, conscious, and person-centered user experiences.</li>
+    <li><strong style='font-weight: 500;'>Project Management & Coordination:</strong> end-to-end project management and development, from initial brief to realization.</li>
+    <li><strong style='font-weight: 500;'>Strategic Consulting:</strong> translation of systemic complexities into clear operative strategies.</li>`,
+                btn_pub: "Publications",
+                btn_end: "Endorsements",
+                btn_cert: "Certifications",
+                works_title: "Selected works",
+                works_intro: "A curated showcase where empirical research meets digital architecture, transforming complex challenges into measurable human experiences.",
+                works_subintro: "<strong style='font-weight: 500;'>Click on any project to explore full case studies, methodologies, and technical metrics.</strong>",
+                explore_project: "Explore project",
+                
+                card1_title: "Designing for compliance",
+                card1_tags: "WCAG AUDITING &nbsp;&bull;&nbsp; SEMANTIC ARCHITECTURE &nbsp;&bull;&nbsp; EMPIRICAL TESTING &nbsp;&bull;&nbsp; WCAG AUDITING &nbsp;&bull;&nbsp; SEMANTIC ARCHITECTURE &nbsp;&bull;&nbsp; EMPIRICAL TESTING",
+                card1_desc: "Translated complex WCAG compliance mandates into an intuitive interface architecture, building a robust semantic foundation ensuring full digital accessibility. <strong style='font-weight: 500;'>Operational efficiency: 95%</strong> of the sample experienced a drastic <strong style='font-weight: 500;'>acceleration</strong> in search and decoding times for individual regulatory parameters.",
+                
+                card2_title: "Designing for dissemination",
+                card2_tags: "EVENT CURATION &nbsp;&bull;&nbsp; PEER REVIEW &nbsp;&bull;&nbsp; ACADEMIC EDITING &nbsp;&bull;&nbsp; EVENT CURATION &nbsp;&bull;&nbsp; PEER REVIEW &nbsp;&bull;&nbsp; ACADEMIC EDITING",
+                card2_desc: "Conceptualized and led the complete execution of a high-level academic symposium examining AI and creative labor, managing the end-to-end publishing lifecycle across <strong style='font-weight: 500;'>40+ examined papers</strong>.",
+                
+                card3_title: "Designing for education",
+                card3_tags: "TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; PUBLIC UPSKILLING &nbsp;&bull;&nbsp; TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; PUBLIC UPSKILLING",
+                card3_desc: "Designed and executed a digital inclusion program under the PNRR framework, upskilling 375 public sector professionals across online editions and measuring impact with a <strong style='font-weight: 500;'>final satisfaction of 96.48%</strong>.",
+                
+                card4_title: "Designing for facilitation",
+                card4_tags: "R&D COORDINATION &nbsp;&bull;&nbsp; ETHNOGRAPHIC RESEARCH &nbsp;&bull;&nbsp; MOBILE UX &nbsp;&bull;&nbsp; R&D COORDINATION &nbsp;&bull;&nbsp; ETHNOGRAPHIC RESEARCH &nbsp;&bull;&nbsp; MOBILE UX",
+                card4_desc: "Spearheaded the co-design strategy for an ERDF-funded R&D initiative managing <strong style='font-weight: 500;'>7 partners</strong>, <strong style='font-weight: 500;'>2 Living Lab activities</strong>, and <strong style='font-weight: 500;'>4+ focus group activities</strong> to reimagine urban transit.",
+                
+                card5_title: "Designing for engagement",
+                card5_tags: "COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; SOCIAL MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING &nbsp;&bull;&nbsp; COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; SOCIAL MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING",
+card5_desc: "Drove community engagement and social impact strategies for Nassa Sestri Levante, engaging a <strong style='font-weight: 500;'>local community of 2K+ people</strong> through <strong style='font-weight: 500;'>20+ activities and events</strong> over the past 5 years.",
+                
+                card6_title: "Designing for comparison",
+                card6_tags: "HEALTHCARE UX &nbsp;&bull;&nbsp; UI REDESIGN &nbsp;&bull;&nbsp; A/B TESTING &nbsp;&bull;&nbsp; HEALTHCARE UX &nbsp;&bull;&nbsp; UI REDESIGN &nbsp;&bull;&nbsp; A/B TESTING",
+                card6_desc: "Designed a user-centered redesign concept for a healthcare portal, achieving that <strong style='font-weight: 500;'>86.67% of users felt safer and more confident</strong> performing hospital check-ins online rather than at physical desks.",
+                
+                card7_title: "Designing for inclusion",
+                card7_tags: "SERVICE DESIGN &nbsp;&bull;&nbsp; PARTICIPATORY WORKSHOPS &nbsp;&bull;&nbsp; STAKEHOLDER ALIGNMENT &nbsp;&bull;&nbsp; SERVICE DESIGN &nbsp;&bull;&nbsp; PARTICIPATORY WORKSHOPS &nbsp;&bull;&nbsp; STAKEHOLDER ALIGNMENT",
+                card7_desc: "Led user research and co-design for a Living Lab initiative having <strong style='font-weight: 500;'>automatized the verification of over 80 attention elements</strong> for domestic accessibility to enhance autonomy for seniors.",
+                
+                card8_title: "Designing for optimization",
+                card8_tags: "USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; INCLUSIVE PRINCIPLES &nbsp;&bull;&nbsp; USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; INCLUSIVE PRINCIPLES",
+                card8_desc: "Identified <strong style='font-weight: 500;'>25 targeted interventions</strong> to resolve errors on a public administration website that previously suffered from a high average task abandonment rate of <strong style='font-weight: 500;'>71.87%</strong>.",
+                
+                card9_title: "Designing for product",
+                card9_tags: "3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH &nbsp;&bull;&nbsp; 3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH",
+                card9_desc: "Developed a comprehensive product design initiative with <strong style='font-weight: 500;'>Barilla</strong>, integrating advanced prototyping techniques with market research and <strong style='font-weight: 500;'>visual storytelling</strong>.",
+                
+                card10_title: "Designing for web",
+                card10_tags: "DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING &nbsp;&bull;&nbsp; DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING",
+                card10_desc: "Conceptualized and developed Booked Time following a <strong style='font-weight: 500;'>questionnaire administered to over 100 users</strong> regarding reading difficulties and desires to shape a high-social-value digital solution.",
+
+                works_conclusion: "These projects reflect the current state of my work and my approach, <br>driven by a simple conviction: design is everywhere.<br>When it works, you don’t see it.<br>When it doesn’t, I do — and I can’t help but think about how to make it better.",
+                
+                footer_title: "I'm always open to meaningful opportunities.",
+                btn_email: "Contact me via email &rarr;",
+                btn_linkedin: "Connect on LinkedIn &rarr;"
+            },
+            it: {
+                nav_home: "Homepage",
+                nav_about: "Chi sono",
+                nav_works: "Progetti scelti",
+                nav_contacts: "Contatti",
+                hero_badge: "DISPONIBILE PER ASSUNZIONI",
+                hero_role: "Digital Designer & UX/UI Specialist",
+                hero_title_hi: "Ciao, sono",
+                hero_intro: "<em>Mi definisco un’<strong style='font-weight: 500;'>umanista digitale</strong> perché unisco design, ricerca e project management per realizzare esperienze centrate sulle persone.</em>",
+                hero_scroll_label: "Esplora approccio e lavori",
+                about_title: "Chi sono",
+                about_p1: "Sono una designer con un percorso evoluto dalla progettazione di prodotto e comunicazione alla sfera digitale dell’experience design. Il mio profilo unisce una solida radice accademica — culminata in un Dottorato in Design dedicato all’accessibilità e all’inclusività negli ecosistemi digitali — a una visione fortemente strategica.",
+                about_p2: "Integro ricerca, strategia e progettazione per tradurre sfide complesse in soluzioni strutturate, accompagnando le iniziative dal concept fino al delivery, con un metodo in cui la visione creativa si salda costantemente al rigore organizzativo e al coordinamento.",
+                about_p3_title: "<strong style='font-weight: 500;'>Aree d’intervento:</strong>",
+                about_p3_list: `<li><strong style='font-weight: 500;'>Digital & Inclusive Experience Design:</strong> progettazione di esperienze utente accessibili, consapevoli e centrate sulla persona.</li>
+    <li><strong style='font-weight: 500;'>Project Management & Coordination:</strong> gestione e sviluppo di progetti end-to-end, dal brief iniziale alla realizzazione.</li>
+    <li><strong style='font-weight: 500;'>Strategic Consulting:</strong> traduzione di complessità sistemiche in strategie operative chiare.</li>`,
+                btn_pub: "Pubblicazioni",
+                btn_end: "Referenze",
+                btn_cert: "Certificazioni",
+                works_title: "Progetti selezionati",
+                works_intro: "Una vetrina curata in cui la ricerca empirica incontra l'architettura digitale, trasformando sfide complesse in esperienze misurabili.",
+                works_subintro: "<strong style='font-weight: 500;'>Clicca su qualsiasi progetto per esplorare i casi studio completi, le metodologie e le metriche tecniche.</strong>",
+                explore_project: "Scopri il progetto",
+                
+                card1_title: "Progettare per conformare",
+                card1_tags: "AUDITING WCAG &nbsp;&bull;&nbsp; ARCHITETTURA SEMANTICA &nbsp;&bull;&nbsp; VALIDAZIONE EMPIRICA &nbsp;&bull;&nbsp; AUDITING WCAG &nbsp;&bull;&nbsp; ARCHITETTURA SEMANTICA &nbsp;&bull;&nbsp; VALIDAZIONE EMPIRICA",
+                card1_desc: "Trasformazione dei complessi obblighi WCAG in un'architettura d'interfaccia intuitiva. <strong style='font-weight: 500;'>Efficienza operativa: il 95%</strong> del campione ha sperimentato una drastica <strong style='font-weight: 500;'>accelerazione</strong> nei tempi di ricerca e decodifica dei singoli parametri normativi.",
+                
+                card2_title: "Progettare per divulgare",
+                card2_tags: "CURATELA EVENTI &nbsp;&bull;&nbsp; GESTIONE PEER REVIEW &nbsp;&bull;&nbsp; EDITING ACCADEMICO &nbsp;&bull;&nbsp; CURATELA EVENTI &nbsp;&bull;&nbsp; GESTIONE PEER REVIEW &nbsp;&bull;&nbsp; EDITING ACCADEMICO",
+                card2_desc: "Ideazione e coordinamento di un simposio accademico sull'intersezione tra AI e lavoro creativo, esaminando <strong style='font-weight: 500;'>oltre 40 paper</strong> e gestendo l'intero ciclo di pubblicazione.",
+                
+                card3_title: "Progettare per educare",
+                card3_tags: "TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; UPSKILLING PA &nbsp;&bull;&nbsp; TRAINING DESIGN &nbsp;&bull;&nbsp; E-LEARNING DELIVERY &nbsp;&bull;&nbsp; UPSKILLING PA",
+                card3_desc: "Realizzazione di un programma di inclusione digitale (PNRR), formando professionisti della PA online e registrando una <strong style='font-weight: 500;'>soddisfazione finale del 96,48%</strong>.",
+                
+                card4_title: "Progettare per facilitare",
+                card4_tags: "COORDINAMENTO R&D &nbsp;&bull;&nbsp; RICERCA ETNOGRAFICA &nbsp;&bull;&nbsp; MOBILE UX &nbsp;&bull;&nbsp; COORDINAMENTO R&D &nbsp;&bull;&nbsp; RICERCA ETNOGRAFICA &nbsp;&bull;&nbsp; MOBILE UX",
+                card4_desc: "Guida della strategia di co-design per la mobilità urbana gestendo <strong style='font-weight: 500;'>7 partner</strong>, <strong style='font-weight: 500;'>2 attività di living lab</strong> e <strong style='font-weight: 500;'>oltre 4 focus group</strong>.",
+                
+                card5_title: "Progettare per coinvolgere",
+                card5_tags: "COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; PROJECT MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING &nbsp;&bull;&nbsp; COMMUNITY ENGAGEMENT &nbsp;&bull;&nbsp; PROJECT MANAGEMENT &nbsp;&bull;&nbsp; GRANT WRITING",
+	card5_desc: "Strategie di impatto sociale per Nassa Sestri Levante, coinvolgendo una <strong style='font-weight: 500;'>community locale di oltre 2mila persone</strong> attraverso <strong style='font-weight: 500;'>oltre 20 attività ed eventi</strong> negli ultimi 5 anni.",
+                
+                card6_title: "Progettare per confrontare",
+                card6_tags: "HEALTHCARE UX &nbsp;&bull;&nbsp; RESTYLING UI &nbsp;&bull;&nbsp; TEST A/B &nbsp;&bull;&nbsp; HEALTHCARE UX &nbsp;&bull;&nbsp; RESTYLING UI &nbsp;&bull;&nbsp; TEST A/B",
+                card6_desc: "Progettazione e test A/B per un portale sanitario: l'interfaccia progettata ha reso l'<strong style='font-weight: 500;'>86,67% degli utenti più sicuri e tranquilli</strong> nello svolgere l'accettazione ospedaliera online anziché allo sportello fisico.",
+                
+                card7_title: "Progettare per includere",
+                card7_tags: "SERVICE DESIGN &nbsp;&bull;&nbsp; WORKSHOP PARTECIPATIVI &nbsp;&bull;&nbsp; ALLINEAMENTO STAKEHOLDER &nbsp;&bull;&nbsp; SERVICE DESIGN &nbsp;&bull;&nbsp; WORKSHOP PARTECIPATIVI &nbsp;&bull;&nbsp; ALLINEAMENTO STAKEHOLDER",
+                card7_desc: "Ricerca e co-design per l'autonomia domestica degli anziani, avendo <strong style='font-weight: 500;'>automatizzato la verifica di oltre 80 elementi di attenzione</strong> per l'accessibilità domestica.",
+                
+                card8_title: "Progettare per ottimizzare",
+                card8_tags: "USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; PRINCIPI INCLUSIVI &nbsp;&bull;&nbsp; USABILITY TESTING &nbsp;&bull;&nbsp; PUBLIC DESIGN &nbsp;&bull;&nbsp; PRINCIPI INCLUSIVI",
+                card8_desc: "Individuati <strong style='font-weight: 500;'>25 interventi puntali</strong> per risolvere gli errori di un sito web della pubblica amministrazione che registrava una media di task non completati del <strong style='font-weight: 500;'>71,87%</strong>.",
+                
+                card9_title: "Progettare per il prodotto",
+                card9_tags: "3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH &nbsp;&bull;&nbsp; 3D MODELING &nbsp;&bull;&nbsp; 3D PRINTING &nbsp;&bull;&nbsp; MARKET RESEARCH",
+                card9_desc: "Sviluppo di un progetto di product design con <strong style='font-weight: 500;'>Barilla</strong>, integrando tecniche avanzate di prototipazione con ricerche di mercato e <strong style='font-weight: 500;'>visual storytelling</strong>.",
+                
+                card10_title: "Progettare per il web",
+                card10_tags: "DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING &nbsp;&bull;&nbsp; DATA VISUALIZATION &nbsp;&bull;&nbsp; SWOT ANALYSIS &nbsp;&bull;&nbsp; PROBLEM SOLVING",
+                card10_desc: "Sviluppo di Booked Time a seguito di un <strong style='font-weight: 500;'>questionario somministrato ad oltre 100 utenti</strong> sulle difficoltà e sui desideri riguardo alla lettura.",
+
+                works_conclusion: "Questi progetti raccontano che professionista sono oggi e qual è il mio approccio, <br>basato su una semplice convinzione: il design è ovunque.<br>Quando funziona, tu non te ne accorgi.<br>Quando non funziona, me ne accorgo io — e non posso fare a meno di chiedermi come migliorarlo.",
+                
+                footer_title: "Sono sempre aperta a opportunità significative.",
+                btn_email: "Contattami via email &rarr;",
+                btn_linkedin: "Connettiti su LinkedIn &rarr;"
+            }
+        };
+
+        const navbar = document.querySelector('.navbar');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        const progressRing = document.getElementById('progressRingCircle');
+        const ringCircumference = 2 * Math.PI * 20.5;
+        if (progressRing) {
+            progressRing.style.strokeDasharray = `${ringCircumference}`;
+            progressRing.style.strokeDashoffset = `${ringCircumference}`;
+        }
+
+        function updateScrollUI() {
+            const scrollY = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+
+            if (scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+
+            if (progressRing) {
+                progressRing.style.strokeDashoffset = `${ringCircumference * (1 - progress)}`;
+            }
+
+            navbar.classList.toggle('is-scrolled', scrollY > 40);
+        }
+
+        window.addEventListener('scroll', updateScrollUI, { passive: true });
+        updateScrollUI();
+
+        scrollTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const heroSection = document.querySelector('.hero-section');
+        const heroPortrait = document.querySelector('.hero-portrait-modern');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+        if (heroSection && !prefersReducedMotion && !isTouchDevice) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const relX = ((e.clientX - rect.left) / rect.width) * 100;
+                const relY = ((e.clientY - rect.top) / rect.height) * 100;
+                heroSection.style.setProperty('--mx', `${relX}%`);
+                heroSection.style.setProperty('--my', `${relY}%`);
+
+                if (heroPortrait) {
+                    const offsetX = (relX - 50) / 10;
+                    const offsetY = (relY - 50) / 15;
+                    heroPortrait.style.setProperty('--mx-offset', offsetX.toFixed(2));
+                    heroPortrait.style.setProperty('--my-offset', offsetY.toFixed(2));
+                }
+            });
+        }
+
+        const revealTargets = document.querySelectorAll('.work-card, .section-title-wrapper');
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = el.classList.contains('work-card')
+                            ? (index % 2) * 90
+                            : 0;
+                        setTimeout(() => {
+                            el.classList.add('in-view');
+                        }, delay);
+                        revealObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            revealTargets.forEach(el => revealObserver.observe(el));
+        } else {
+            revealTargets.forEach(el => el.classList.add('in-view'));
+        }
+
+        // --- CUSTOM CURSOR SCRIPT ---
+        const dot = document.querySelector('.custom-cursor-dot');
+        const trail = document.querySelector('.custom-cursor-trail');
+        const isTouch = window.matchMedia('(hover: none)').matches;
+
+        if (!isTouch && dot && trail) {
+            let mouseX = 0, mouseY = 0;
+            let trailX = 0, trailY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                dot.style.left = `${mouseX}px`;
+                dot.style.top = `${mouseY}px`;
+            });
+
+            function animateTrail() {
+                trailX += (mouseX - trailX) * 0.20;
+                trailY += (mouseY - trailY) * 0.20;
+                trail.style.left = `${trailX}px`;
+                trail.style.top = `${trailY}px`;
+                requestAnimationFrame(animateTrail);
+            }
+            animateTrail();
+        } else {
+            if (dot) dot.style.display = 'none';
+            if (trail) trail.style.display = 'none';
+        }
+    </script>
+    <script src="translate.js"></script>
+</body>
+</html>
